@@ -1,17 +1,20 @@
-stages {
-        stage('Build') { 
-            steps { 
-                sh 'echo "build"' 
+pipeline{
+    agent any
+    stages {
+            stage('Build') {
+                steps {
+                    sh 'echo "build"'
+                }
             }
-        }
-        stage('Test'){
-            steps {
-                sh 'echo "test"' 
+            stage('Test'){
+                steps {
+                    sh 'echo "test"'
+                }
             }
-        }
-        stage('Deploy') {
-            steps {
-                sh 'echo "deploy"'
+            stage('Deploy') {
+                steps {
+                    sh 'echo "deploy"'
+                }
             }
-        }
     }
+}
